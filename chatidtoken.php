@@ -34,17 +34,16 @@ echo "<table border=\"1\" style=\"width:50%\">";
 echo "<tr><th>CHATID</th><th>NAME</th><th>USERNAME</th></tr>";
 $lastuser = " ";
 foreach($users as $user){
-    echo "<tr>";
     if($user[1] == NULL){ //delete NULL value, needless
         unset($users[$user]); 
     }else{
         if($user[0] != $lastuser){ //control for not repeat value
+            echo "<tr>";
             echo "<td>".$user[0]."</td><td>".$user[1]."</td><td>".$user[2]."</td>";
-          //  echo "<br>";
+            echo "</tr>";
             $lastuser = $user[0];
         }
-    }    
-    echo "</tr>";
+    }       
 }
 echo "</table>";
 
