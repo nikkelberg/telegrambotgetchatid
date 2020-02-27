@@ -1,4 +1,4 @@
-Added a table print formatted<?php 
+<?php 
 include 'funzioniutili.php';
 $response = file_get_contents("https://api.telegram.org/bot<bottoken>/getUpdates");
 
